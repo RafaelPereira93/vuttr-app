@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VUTTR - Very Useful Tools to Remember</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="title-app">Vuttr</h1>
+        <h2 class="subtitle-app">
+          Very Useful Tools to Remember <img src="./tools-icon.svg" alt="" />
+        </h2>
+
+        <form class="form-header">
+          <input
+            class="search-tools"
+            type="text"
+            placeholder="search"
+            data-js="search"
+          />
+
+          <label class="search-tags">
+            <input type="checkbox" data-js="checkbox-tags" />
+            search in tags only
+          </label>
+
+          <span class="add-new-tool">+ ADD</span>
+        </form>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="box-tools"></div>
+      </div>
+    </main>
+
+    <div class="modal-new-tool d-none" data-js="modal">
+      <div class="new-tool">
+        <h3 class="title-new-tool">+ Add new tool</h3>
+        <form class="form-new-tool">
+          <label for="tool-name">Tool Name</label>
+          <input type="text" id="tool-title" autocomplete="off" />
+          <label for="tool-link">Tool Link</label>
+          <input type="text" id="tool-link" autocomplete="off" />
+          <label for="tool-description">Tool description</label>
+          <textarea
+            id="tool-description"
+            cols="30"
+            rows="4"
+            autocomplete="off"
+          ></textarea>
+          <label for="tool-tags">Tags</label>
+          <input type="text" id="tool-tags" autocomplete="off" />
+          <button class="add-tool">Add tool</button>
+        </form>
+        <button class="close-modal-new-tool" data-js="modal">X</button>
+      </div>
+    </div>
+
+    <div class="modal-remove-tool d-none">
+      <div class="remove-tool">
+        <h3 class="title-remove-tool">Remove Tool</h3>
+        <p class="content-remove-tool">
+          Are you sure you want to remove hotel ?
+        </p>
+        <div class="buttons-remove-tool">
+          <button class="cancel-remove">Cancel</button>
+          <button class="confirm-remove">Yes, remove</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

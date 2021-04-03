@@ -1,0 +1,87 @@
+.header-tool {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.tool {
+  padding: 20px;
+  border: 1px solid #ff7979;
+  margin: 40px 0;
+}
+
+.title-tool {
+  font-size: 1.5em;
+}
+
+.title-tool a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.title-tool a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #ff7979;
+  margin-top: 3px;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.title-tool a:hover:after {
+  width: 100%;
+}
+
+.tool .remove-tool {
+  width: 80px;
+  padding: 5px;
+  font-weight: bold;
+  background: #ff7979;
+  color: #fff;
+  font-size: 0.9em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px #fff;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.tool .remove-tool:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ff7979;
+}
+
+.content-tool {
+  margin: 15px 0;
+}
+
+.description-tool {
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.tags-tool {
+  margin: 10px 0;
+}
+
+.tags-tool .tag {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+@media (min-width: 300px) and (max-width: 720px) {
+  .header-tool {
+    flex-direction: column;
+  }
+
+  .tool .remove-tool {
+    margin: 10px 0 10px auto;
+  }
+
+  .tool {
+    padding: 15px;
+  }
+}

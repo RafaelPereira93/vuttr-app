@@ -1,0 +1,275 @@
+.modal-new-tool {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  color: #fff;
+}
+
+.modal-new-tool.d-none {
+  display: none;
+}
+
+.new-tool {
+  display: flex;
+  align-items: normal;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 30px 50px;
+  background: #3d3d3d;
+  border: 3px solid #ff7979;
+  position: relative;
+  animation: translateNewTool 0.3s forwards;
+}
+
+@keyframes translateNewTool {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.new-tool .title-new-tool {
+  font-size: 2em;
+  margin: 0 0 20px;
+}
+
+.form-new-tool {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-new-tool label {
+  margin: 15px 0;
+}
+
+.form-new-tool input,
+.form-new-tool textarea {
+  padding: 3px 8px;
+  border: none;
+  outline: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1;
+  border: 3px solid transparent;
+  transition: 0.3s;
+}
+
+.form-new-tool input:focus,
+.form-new-tool textarea:focus {
+  border: 3px solid #ff7979;
+}
+
+.form-new-tool .add-tool {
+  width: 130px;
+  margin-top: 30px;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: auto;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #ff7979;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 0 2px #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.form-new-tool .add-tool:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ff7979;
+}
+
+.close-modal-new-tool {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: #ff7979;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.6em;
+  line-height: 45px;
+  font-weight: bold;
+
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px #fff;
+
+  transition: 0.3s ease-in-out;
+}
+
+.close-modal-new-tool:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ff7979;
+}
+
+/* MODAL REMOVE TOOL */
+
+.modal-remove-tool {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  color: #fff;
+}
+
+.modal-remove-tool.d-none {
+  display: none;
+}
+
+.modal-remove-tool .remove-tool {
+  display: flex;
+  align-items: normal;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 30px 50px;
+  background: #3d3d3d;
+  border: 3px solid #ff7979;
+  position: relative;
+  animation: translateRemoveTool 0.3s;
+}
+
+@keyframes translateRemoveTool {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.modal-remove-tool .remove-tool .title-remove-tool {
+  font-size: 2em;
+  margin: 0 0 5px;
+}
+
+.modal-remove-tool .remove-tool .content-remove-tool {
+  font-size: 1.3em;
+}
+
+.modal-remove-tool .remove-tool .buttons-remove-tool {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.remove-tool .color-tool {
+  color: #ff7979;
+}
+
+.remove-tool .buttons-remove-tool button {
+  width: 130px;
+  margin-left: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #ff7979;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 0 2px #fff;
+  transition: 0.3s ease-in-out;
+  outline: none;
+}
+
+.remove-tool .buttons-remove-tool button:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ff7979;
+}
+
+@media (max-width: 720px) {
+  /* MODAL ADD TOOL */
+
+  .new-tool {
+    width: 80%;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 30px 30px;
+  }
+
+  /* REMOVE ADD TOOL */
+
+  .modal-remove-tool .remove-tool {
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+  }
+
+  .modal-remove-tool .remove-tool .title-remove-tool {
+    font-size: 1.5em;
+  }
+
+  .modal-remove-tool .remove-tool .content-remove-tool {
+    font-size: 1.2em;
+  }
+
+  .modal-remove-tool .remove-tool .buttons-remove-tool {
+    justify-content: flex-end;
+  }
+
+  .remove-tool .buttons-remove-tool button {
+    margin-right: 10px;
+    width: 80px;
+    padding: 5px 10px;
+  }
+
+  .close-modal-new-tool {
+    width: 40px;
+    height: 40px;
+    top: -25px;
+    left: -20px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .modal-new-tool {
+    width: 100%;
+  }
+
+  .new-tool {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .close-modal-new-tool {
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .new-tool .title-new-tool {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .form-new-tool .add-tool {
+    margin: 25px auto;
+    outline: none;
+  }
+}
